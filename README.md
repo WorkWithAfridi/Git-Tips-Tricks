@@ -18,6 +18,10 @@ Git Commands
 | `git commit -m "[commit message]"` | Commit changes |
 | `git rm -r [file-name.txt]` | Remove a file (or folder) |
 | `git reset head --hard` | Resets local repo to last commit/head |
+| `git stash` | To store current changes without commiting |
+| `git pop` | To bring back the stashed changes |
+| `git clean -df` | To delete unwanted untracked files |
+| `git checkout -` | To move to previous branch after checking out new branch |
 
 ### Branching & Merging
 
@@ -38,6 +42,7 @@ Git Commands
 | `git merge [source branch] [target branch]` | Merge a branch into a target branch |
 | `git stash` | Stash changes in a dirty working directory |
 | `git stash clear` | Remove all stashed entries |
+| `git reset --hard origin/master` | To override local git with that of the remote. This will reset everything to match the remote |
 
 ### Sharing & Updating Projects
 
@@ -60,9 +65,19 @@ Git Commands
 | `git log --summary` | View changes (detailed) |
 | `git log --oneline` | View changes (briefly) |
 | `git diff [source branch] [target branch]` | Preview changes before merging |
+| `git log --graph --oneline --decorate` | To log commits in a graph like form |
 
 ### Remove Git
 
 | Command | Description |
 | ------- | ----------- |
 | `rm -rf .git` | Removes GIT from current working repo |
+
+### Git Shortcuts
+
+| Command | Description |
+| ------- | ----------- |
+| `git commit -am"Your commit message"` | Instead of git add . & git commit -m"Your commit message" |
+| `git config --global alias.<<Your shortcut here>> "<<git command here>>"` | Adds a custom command. For Example: `git config --global alias.ac "commit -am"`, sets "git ac" as git commit -am. | 
+| `git commit --amend -m"<<Your commit message>>"` | Will updated the last commit message |
+| `git push origin YOURBranch --force` | Will override the remote repo with local repo |

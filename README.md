@@ -81,3 +81,4 @@ Git Commands
 | `git config --global alias.<<Your shortcut here>> "<<git command here>>"` | Adds a custom command. For Example: `git config --global alias.ac "commit -am"`, sets "git ac" as git commit -am. | 
 | `git commit --amend -m"<<Your commit message>>"` | Will updated the last commit message |
 | `git push origin YOURBranch --force` | Will override the remote repo with local repo |
+| `git revert --no-commit 0d1d7fc3..HEAD -> git commit` | Revert to a previous published commit |

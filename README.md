@@ -17,7 +17,8 @@ Git Commands
 | `git add -A` | Add all new and changed files to the staging area |
 | `git commit -m "[commit message]"` | Commit changes |
 | `git rm -r [file-name.txt]` | Remove a file (or folder) |
-| `git reset head --hard` | Resets local repo to last commit/head |
+| `git reset head --hard` | Resets local repo to last commit/head - will lose all the changes |
+| `git reset --soft HEAD~` | Resets local repo's current (n) commit to n-1 commit - without losing the nth committed changes |
 | `git stash` | To store current changes without commiting |
 | `git pop` | To bring back the stashed changes |
 | `git clean -df` | To delete unwanted untracked files |

@@ -83,3 +83,10 @@ Git Commands
 | `git commit --amend -m"<<Your commit message>>"` | Will updated the last commit message |
 | `git push origin YOURBranch --force` | Will override the remote repo with local repo |
 | `git revert --no-commit 0d1d7fc3..HEAD -> git commit` | Revert to a previous published commit |
+
+### Replace Git History with new Author
+
+| Command | Description |
+| ------- | ----------- |
+| Run the following scripts to remove past commit's author history with new author |
+| `git filter-branch -f --env-filter " GIT_AUTHOR_NAME='WorkWithAfridi' GIT_AUTHOR_EMAIL='afridi.khondakar@gmail.com' GIT_COMMITTER_NAME='WorkWithAfridi' GIT_COMMITTER_EMAIL='afridi.khondakar@gmail.com' " HEAD`| 

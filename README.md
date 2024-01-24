@@ -88,5 +88,5 @@ Git Commands
 
 | Command | Description |
 | ------- | ----------- |
-| Run the following scripts to remove past commit's author history with new author |
-| `git filter-branch -f --env-filter " GIT_AUTHOR_NAME='WorkWithAfridi' GIT_AUTHOR_EMAIL='afridi.khondakar@gmail.com' GIT_COMMITTER_NAME='WorkWithAfridi' GIT_COMMITTER_EMAIL='afridi.khondakar@gmail.com' " HEAD`| 
+| `git filter-branch -f --env-filter " GIT_AUTHOR_NAME='WorkWithAfridi' GIT_AUTHOR_EMAIL='afridi.khondakar@gmail.com' GIT_COMMITTER_NAME='WorkWithAfridi' GIT_COMMITTER_EMAIL='afridi.khondakar@gmail.com' " HEAD` | Run the following scripts to remove past commit's author history with new author |
+ 

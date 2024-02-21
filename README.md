@@ -89,4 +89,13 @@ Git Commands
 | Command | Description |
 | ------- | ----------- |
 | `git filter-branch -f --env-filter " GIT_AUTHOR_NAME='WorkWithAfridi' GIT_AUTHOR_EMAIL='afridi.khondakar@gmail.com' GIT_COMMITTER_NAME='WorkWithAfridi' GIT_COMMITTER_EMAIL='afridi.khondakar@gmail.com' " HEAD` | Run the script to replace past commit's author history with new author |
+| git filter-branch -f --commit-filter '
+    if [ "$GIT_AUTHOR_NAME" = "old_username" ] && [ "$GIT_AUTHOR_EMAIL" = "old_email" ]; then
+        GIT_AUTHOR_NAME="WorkWithAfridi"
+        GIT_AUTHOR_EMAIL="afridi.khondakar@gmail.com"
+        GIT_COMMITTER_NAME="WorkWithAfridi"
+        GIT_COMMITTER_EMAIL="afridi.khondakar@gmail.com"
+    fi
+    git commit-tree "$@"
+' HEAD | Run the script to replace certain users commit's author history with new author, remember to change the old_username & old_email properties |
  

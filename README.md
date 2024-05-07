@@ -50,6 +50,7 @@ Git Commands
 
 | Command | Description |
 | ------- | ----------- |
+| `git config --local fetch.prune true` | Removes and cleans up repo, deletes branchs which are also removed/deleted from the remote repos |
 | `git push origin [branch name]` | Push a branch to your remote repository |
 | `git push -u origin [branch name]` | Push changes to remote repository (and remember the branch) |
 | `git push` | Push changes to remote repository (remembered branch) |
@@ -91,7 +92,8 @@ Git Commands
 | Command | Description |
 | ------- | ----------- |
 | `git filter-branch -f --env-filter " GIT_AUTHOR_NAME='WorkWithAfridi' GIT_AUTHOR_EMAIL='afridi.khondakar@gmail.com' GIT_COMMITTER_NAME='WorkWithAfridi' GIT_COMMITTER_EMAIL='afridi.khondakar@gmail.com' " HEAD` | Run the script to replace past commit's author history with new author |
-```
+
+ ```
 git filter-branch -f --commit-filter '
     if [ "$GIT_AUTHOR_NAME" = "old_username" ] && [ "$GIT_AUTHOR_EMAIL" = "old_email" ]; then
         GIT_AUTHOR_NAME="WorkWithAfridi"

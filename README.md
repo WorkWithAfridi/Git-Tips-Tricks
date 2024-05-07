@@ -29,6 +29,7 @@ Git Commands
 | Command | Description |
 | ------- | ----------- |
 | `git branch` | List branches (the asterisk denotes the current branch) |
+| `git clone --branch 11.5 --shallow-since=3m https://github.com/MariaDB/server.git mariadb-serverh` | This will make a clone that only tracks branch 11.5 and no other branches. Additionally this uses the shallow clone feature to fetch commit history only for the past 3 months instead of the entire history (which in this example otherwise would be 20+ years). |
 | `git branch -a` | List all branches (local and remote) |
 | `git branch [branch name]` | Create a new branch |
 | `git branch -d [branch name]` | Delete a branch |
@@ -57,6 +58,7 @@ Git Commands
 | `git pull origin [branch name]` | Pull changes from remote repository |
 | `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Add a remote repository |
 | `git remote set-url origin ssh://git@github.com/[username]/[repository-name].git` | Set a repository's origin branch to SSH |
+| `git remote update` | will fetch all remotes and make sure you have all the latest git commits made since the last time you worked with the repository |
 
 ### Inspection & Comparison
 
